@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avocado Love with Keroppi</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to bottom right, #a8e6cf, #dcedc1);
+      color: #2e7d32;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #81c784;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      animation: fadeInDown 1.5s ease-out;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      animation: bounce 2s infinite;
+    }
+
+    .keroppi-img {
+      width: 150px;
+      margin-top: 20px;
+      animation: dance 1s infinite alternate;
+    }
+
+    .content {
+      max-width: 800px;
+      margin: auto;
+      background: #f0fff0;
+      border-radius: 20px;
+      padding: 30px;
+      margin-top: 40px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      animation: fadeIn 2s ease-in;
+      text-align: center;
+    }
+
+    .avocado-heart {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 20px;
+      animation: pulse 2s infinite;
+    }
+
+    .avocado-heart span {
+      display: inline-block;
+      font-size: 3rem;
+      color: #4caf50;
+      transform: rotate(-20deg);
+    }
+
+    .surprise-btn {
+      background-color: #66bb6a;
+      color: white;
+      font-size: 1.2rem;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background-color 0.3s ease;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .surprise-btn:hover {
+      background-color: #388e3c;
+    }
+
+    #hidden-note {
+      display: none;
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #dcedc1;
+      border-radius: 15px;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      background-color: #c8e6c9;
+      font-size: 1.2rem;
+      animation: slideUp 1.5s ease-in-out;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes dance {
+      0% { transform: rotate(-10deg); }
+      100% { transform: rotate(10deg); }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    function showSurprise() {
+      confetti({
+        particleCount: 150,
+        spread: 80,
+        origin: { y: 0.6 }
+      });
+      alert("🌟 Surprise! You're the guac to my chips, the green in my life, and the reason I smile every day. Love you! 💚🥑🐸");
+      document.getElementById('hidden-note').style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <!-- Background music -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_5221a4c61d.mp3?filename=sweet-ukulele-10931.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <header>
+    <h1>Avocado Love 🥑💚</h1>
+    <img src="image/bal ko.avif">
+  </header>
+
+  <div class="content">
+    <p>Hi Bal 💚 </p>
+    <p>This little website is just for you. It's full of green, cuteness, and everything avocado — just like your vibe. And of course, Keroppi is here to keep us company! 🐸</p>
+
+    <div class="avocado-heart">
+      <span>🥑</span>
+      <span>💚</span>
+      <span>🥑</span>
+    </div>
+
+    <button class="surprise-btn" onclick="showSurprise()">Click me for a surprise! 🎁</button>
+
+    <div id="hidden-note">
+      💌 P.S. I just wanted to remind you that you're the most wonderful person ever, and I’m so lucky to have you. You light up my world like sunshine on avocados. 🥑💚 
+    </div>
+  </div>
+
+  <footer>
+    Made with love & avocados 💚 by your Winnie the Pooh
+  </footer>
+</body>
+</html>
